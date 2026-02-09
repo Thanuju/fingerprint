@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ATM Dashboard</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+<div class="atm-frame">
+
+    <div class="atm-title">Welcome, {{ user[0] }}</div>
+    <div class="atm-sub">
+        Account: {{ user[1] }}<br>
+        Balance: ₹{{ user[2] }}
+    </div>
+
+    <a href="/withdraw" class="atm-btn">Withdraw</a>
+    <a href="/deposit" class="atm-btn">Deposit</a>
+    <a href="/history" class="atm-btn">Transaction History</a>
+    <a href="/logout" class="atm-btn atm-btn-logout">Logout</a>
+
+</div>
+
+</body>
+</html>

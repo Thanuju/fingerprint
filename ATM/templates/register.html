@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Register User</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+
+<div class="atm-frame">
+
+    <div class="atm-title">Register New User</div>
+    <div class="atm-sub">Fill details and upload fingerprint</div>
+
+    <form action="/save_user" method="POST" enctype="multipart/form-data">
+
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="text" name="account" placeholder="Account Number" required>
+        <input type="password" name="pin" placeholder="4 Digit PIN" required>
+        <input type="number" name="phone" placeholder="Phone Number" required>
+
+        <label style="color:#00ff99; font-size:18px;">Upload Fingerprint:</label>
+        <input type="file" name="fingerprint" required>
+
+        <button class="atm-btn">Register</button>
+    </form>
+
+    <a href="/" class="atm-btn atm-btn-logout">Back to Login</a>
+
+</div>
+
+</body>
+</html>

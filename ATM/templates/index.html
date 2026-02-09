@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Fingerprint ATM Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<div class="atm-frame">
+
+    <div class="atm-title">Fingerprint Login</div>
+    <div class="atm-sub">
+         Upload the fingerprint image to continue.
+    </div>
+
+    <form action="/verify_fingerprint" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*" required>
+        <button class="atm-btn">Verify Fingerprint</button>
+    </form>
+
+    <!-- 100% FIXED — Register button now correctly loads /register -->
+    <a href="/register" class="atm-btn">Register New User</a>
+
+</div>
+
+</body>
+</html>

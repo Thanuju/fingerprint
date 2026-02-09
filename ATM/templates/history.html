@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transaction History</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+<div class="atm-frame">
+
+    <div class="atm-title">Your Transactions</div>
+
+    <table class="table">
+        <tr>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Balance</th>
+            <th>Date</th>
+        </tr>
+
+        {% for row in data %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>₹{{ row[1] }}</td>
+            <td>₹{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="/dashboard" class="atm-btn">Back</a>
+    <a href="/logout" class="atm-btn atm-btn-logout">Logout</a>
+
+</div>
+
+</body>
+</html>

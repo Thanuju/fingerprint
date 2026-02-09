@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Enter PIN</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+<div class="atm-frame">
+    <div class="atm-title">Enter PIN</div>
+    <div class="atm-sub">Please enter your 4-digit PIN to continue.</div>
+
+    <form action="/verify_pin" method="POST">
+        <input type="password" name="pin" placeholder="Enter PIN" required>
+        <button class="atm-btn">Login</button>
+    </form>
+
+    <a href="/" class="atm-btn atm-btn-logout">Cancel</a>
+</div>
+
+</body>
+</html>
